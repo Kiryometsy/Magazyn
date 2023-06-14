@@ -11,8 +11,8 @@ namespace WPFWindow.Models
         public static Lista_Produktow ListaProd = new Lista_Produktow();
 
         public static string Name = "Stokrotka";
-
-
-
+        
+        
+        
     }
 }

@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace WPFWindow.Models
 {
-    public class Produkt : IEquatable<Produkt>
+    public class Produkt:IEquatable<Produkt>
     {
         public string Name { get; }
         public double Price { get; private set; }
         public int Amount { get; private set; }
-        public Produkt(string name, double price, int amount)
-        {
-
+        public Produkt(string name,double price,int amount) { 
+            
             Name = name;
             Price = price;
             Amount = amount;
             Magazyn.ListaProd.AutoAdd(this);
 
         }
-
+        
         public void SetPrice(double price)
         {
-            Price = price;
+            Price= price;
         }
         public void SetAmount(int amonut)
         {
@@ -38,6 +37,6 @@ namespace WPFWindow.Models
         {
             return this.Name == other.Name;
         }
-
+        
     }
 }

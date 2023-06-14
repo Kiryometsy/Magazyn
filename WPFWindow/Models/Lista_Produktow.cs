@@ -10,22 +10,23 @@ namespace WPFWindow.Models
 {
     public class Lista_Produktow
     {
-        private List<Produkt> Lista;
+        public List<Produkt> Lista;
+        
         public Lista_Produktow()
         {
             Lista = new List<Produkt>();
         }
         public IEnumerable<Produkt> GetList()
         {
-            return Lista;
+            return Lista;   
         }
         public void AutoAdd(Produkt produkt)
         {
             Lista.Add(produkt);
         }
-        public void AddProdukt(string name, double price, int amount)
+        public void AddProdukt(string name,double price,int amount)
         {
-            new Produkt(name, price, amount);
+            new Produkt(name,price,amount);
         }
         public void RemoveProdukt(Produkt produkt)
         {

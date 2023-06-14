@@ -12,22 +12,22 @@ namespace WPFWindow.Models
         public string Name { get; set; }
         private List<Produkt> Koszyk { get; set; }
         private int LicznikZam = 0;
-        private Dictionary<int, List<Produkt>> Zamowienia { get; set; }
+        private Dictionary<int,List<Produkt>> Zamowienia { get; set; }
 
         public Uzytkownik(string name)
         {
             Name = name;
             Koszyk = new List<Produkt>();
-            Zamowienia = new Dictionary<int, List<Produkt>>();
+            Zamowienia = new Dictionary<int,List<Produkt>>();
         }
 
 
         //Obsługa koszyka
-        public void SetAmount(Produkt pro, int amount)
+        public void SetAmount(Produkt pro,int amount)
         {
-            foreach (Produkt x in Koszyk)
+            foreach(Produkt x in Koszyk)
             {
-                if (x.Name == pro.Name)
+                if(x.Name==pro.Name)
                 {
                     x.SetAmount(amount); break;
                 }
