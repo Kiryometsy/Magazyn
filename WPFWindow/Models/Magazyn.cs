@@ -12,7 +12,7 @@ namespace WPFWindow.Models
 
         public static string Name = "Stokrotka";
 
-        
-        
+
+
     }
 }
